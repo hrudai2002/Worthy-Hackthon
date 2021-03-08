@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel = "stylesheet" href = "style.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dms_cse.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h3>Discrete Mathematics</h3>
+            <img src = "dms_cse.png" alt = "img">
+        </div>
+        <div class = "Collapse">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><h1>Unit-1</h1></a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/Uc2EJ28m39s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/qhsQ7395_yQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/2p4QA3th8lo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/U0NYn-HyvLg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/wAwJBoV3WkE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </p>
+                            <p>Sharing is always welcome</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-8 col-xs-offset-2 well">
+                                        <form action="uploads.php" method="post" enctype="multipart/form-data">
+                                            <legend>Select File to Upload:</legend>
+                                            <div class="form-group">
+                                                <input type="file" name="file1" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" name="submit" value="Uploads" class="btn btn-info"/>
+                                            </div>
+                                            <?php if(isset($_GET['st'])) { ?>
+                                                <div class="alert alert-danger text-center">
+                                                    <?php if ($_GET['st'] == 'success') {
+                                                        echo "File Uploaded Successfully!";
+                                                    }
+                                                    else
+                                                    {
+                                                        echo 'Invalid File Extension!';
+                                                    } ?>
+                                                </div>
+                                                <?php } ?>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-xs-8 col-xs-offset-2">
+                                            <table class="table table-striped table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>File Name</th>
+                                                        <th>View</th>
+                                                        <th>Download</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <?php
+                                                    $i = 1;
+                                                    while($row = mysqli_fetch_array($result)) { ?>
+                                                        <tr>
+                                                            <td><?php echo $i++; ?></td>
+                                                            <!-- <td>{{$filename}}</td> -->
+                                                            
+                                                            <td><?php echo $row['filename']; ?></td>
+                                                            <td><a href="uploads/<?php echo $row['filename']; ?>" target="_blank">View</a></td>
+                                                            <td><a href="uploads/<?php echo $row['filename']; ?>" download>Download</td>
+                                                            </tr>
+                                                            <?php } ?>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><h1>Unit-II</h1></a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>
+                                     
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/crTYvEkZlKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/a4rTotOg4lo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HfOCICJA5ag" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/YU7hvY-CPdQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ayyiL7arH2s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/-NltIJHcog8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vbF-6rBsvhk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/8LF6CFXM1nk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lrbYSHHVRdA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+                                    </p>
+                                    <p>Sharing is always welcome</p>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xs-8 col-xs-offset-2 well">
+                                            <form action="uploads.php" method="post" enctype="multipart/form-data">
+                                                <legend>Select File to Upload:</legend>
+                                                <div class="form-group">
+                                                    <input type="file" name="file1" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" name="submit" value="Uploads" class="btn btn-info"/>
+                                                </div>
+                                                <?php if(isset($_GET['st'])) { ?>
+                                                    <div class="alert alert-danger text-center">
+                                                        <?php if ($_GET['st'] == 'success') {
+                                                            echo "File Uploaded Successfully!";
+                                                        }
+                                                        else
+                                                        {
+                                                            echo 'Invalid File Extension!';
+                                                        } ?>
+                                                    </div>
+                                                    <?php } ?>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-xs-8 col-xs-offset-2">
+                                                <table class="table table-striped table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>File Name</th>
+                                                            <th>View</th>
+                                                            <th>Download</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php
+                                                        $i = 1;
+                                                        while($row = mysqli_fetch_array($result)) { ?>
+                                                            <tr>
+                                                                <td><?php echo $i++; ?></td>
+                                                                <!-- <td>{{$filename}}</td> -->
+                                                                
+                                                                <td><?php echo $row['filename']; ?></td>
+                                                                <td><a href="uploads/<?php echo $row['filename']; ?>" target="_blank">View</a></td>
+                                                                <td><a href="uploads/<?php echo $row['filename']; ?>" download>Download</td>
+                                                                </tr>
+                                                                <?php } ?>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><h1>Unit-III</h1></a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapse3" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <p>
+                                                
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0bFYtTvQH8s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oQ8gnDkM3X0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JRMX_ZoYAdA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ot8Yf8HjoOg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+                                                </p>
+                                                <p>Sharing is always welcome</p>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-xs-8 col-xs-offset-2 well">
+                                                            <form action="uploads.php" method="post" enctype="multipart/form-data">
+                                                                <legend>Select File to Upload:</legend>
+                                                                <div class="form-group">
+                                                                    <input type="file" name="file1" />
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <input type="submit" name="submit" value="Uploads" class="btn btn-info"/>
+                                                                </div>
+                                                                <?php if(isset($_GET['st'])) { ?>
+                                                                    <div class="alert alert-danger text-center">
+                                                                        <?php if ($_GET['st'] == 'success') {
+                                                                            echo "File Uploaded Successfully!";
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            echo 'Invalid File Extension!';
+                                                                        } ?>
+                                                                    </div>
+                                                                    <?php } ?>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-xs-8 col-xs-offset-2">
+                                                                <table class="table table-striped table-hover">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>#</th>
+                                                                            <th>File Name</th>
+                                                                            <th>View</th>
+                                                                            <th>Download</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <?php
+                                                                        $i = 1;
+                                                                        while($row = mysqli_fetch_array($result)) { ?>
+                                                                            <tr>
+                                                                                <td><?php echo $i++; ?></td>
+                                                                                <!-- <td>{{$filename}}</td> -->
+                                                                                
+                                                                                <td><?php echo $row['filename']; ?></td>
+                                                                                <td><a href="uploads/<?php echo $row['filename']; ?>" target="_blank">View</a></td>
+                                                                                <td><a href="uploads/<?php echo $row['filename']; ?>" download>Download</td>
+                                                                                </tr>
+                                                                                <?php } ?>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><h1>Unit-Iv</h1></a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapse4" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                            <p>
+                                                                
+                                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/J_8Ex-ouE5g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+                                                            </p>
+                                                            <p>Sharing is always welcome</p>
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-xs-8 col-xs-offset-2 well">
+                                                                        <form action="uploads.php" method="post" enctype="multipart/form-data">
+                                                                            <legend>Select File to Upload:</legend>
+                                                                            <div class="form-group">
+                                                                                <input type="file" name="file1" />
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <input type="submit" name="submit" value="Uploads" class="btn btn-info"/>
+                                                                            </div>
+                                                                            <?php if(isset($_GET['st'])) { ?>
+                                                                                <div class="alert alert-danger text-center">
+                                                                                    <?php if ($_GET['st'] == 'success') {
+                                                                                        echo "File Uploaded Successfully!";
+                                                                                    }
+                                                                                    else
+                                                                                    {
+                                                                                        echo 'Invalid File Extension!';
+                                                                                    } ?>
+                                                                                </div>
+                                                                                <?php } ?>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                    
+                                                                    <div class="row">
+                                                                        <div class="col-xs-8 col-xs-offset-2">
+                                                                            <table class="table table-striped table-hover">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <th>#</th>
+                                                                                        <th>File Name</th>
+                                                                                        <th>View</th>
+                                                                                        <th>Download</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <?php
+                                                                                    $i = 1;
+                                                                                    while($row = mysqli_fetch_array($result)) { ?>
+                                                                                        <tr>
+                                                                                            <td><?php echo $i++; ?></td>
+                                                                                            <!-- <td>{{$filename}}</td> -->
+                                                                                            
+                                                                                            <td><?php echo $row['filename']; ?></td>
+                                                                                            <td><a href="uploads/<?php echo $row['filename']; ?>" target="_blank">View</a></td>
+                                                                                            <td><a href="uploads/<?php echo $row['filename']; ?>" download>Download</td>
+                                                                                            </tr>
+                                                                                            <?php } ?>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <h4 class="panel-title">
+                                                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><h1>Unit-V</h1></a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="collapse5" class="panel-collapse collapse">
+                                                                    <div class="panel-body">
+                                                                        <p>
+                                                                         
+                                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7JZAWukw7to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7JZAWukw7to" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                                            
+                                                                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4-Hw8SwbUUs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+                                                                        </p>
+                                                                        <p>Sharing is always welcome</p>
+                                                                        <div class="container">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-8 col-xs-offset-2 well">
+                                                                                    <form action="uploads.php" method="post" enctype="multipart/form-data">
+                                                                                        <legend>Select File to Upload:</legend>
+                                                                                        <div class="form-group">
+                                                                                            <input type="file" name="file1" />
+                                                                                        </div>
+                                                                                        <div class="form-group">
+                                                                                            <input type="submit" name="submit" value="Uploads" class="btn btn-info"/>
+                                                                                        </div>
+                                                                                        <?php if(isset($_GET['st'])) { ?>
+                                                                                            <div class="alert alert-danger text-center">
+                                                                                                <?php if ($_GET['st'] == 'success') {
+                                                                                                    echo "File Uploaded Successfully!";
+                                                                                                }
+                                                                                                else
+                                                                                                {
+                                                                                                    echo 'Invalid File Extension!';
+                                                                                                } ?>
+                                                                                            </div>
+                                                                                            <?php } ?>
+                                                                                        </form>
+                                                                                    </div>
+                                                                                </div>
+                                                                                
+                                                                                <div class="row">
+                                                                                    <div class="col-xs-8 col-xs-offset-2">
+                                                                                        <table class="table table-striped table-hover">
+                                                                                            <thead>
+                                                                                                <tr>
+                                                                                                    <th>#</th>
+                                                                                                    <th>File Name</th>
+                                                                                                    <th>View</th>
+                                                                                                    <th>Download</th>
+                                                                                                </tr>
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <?php
+                                                                                                $i = 1;
+                                                                                                while($row = mysqli_fetch_array($result)) { ?>
+                                                                                                    <tr>
+                                                                                                        <td><?php echo $i++; ?></td>
+                                                                                                        <!-- <td>{{$filename}}</td> -->
+                                                                                                        
+                                                                                                        <td><?php echo $row['filename']; ?></td>
+                                                                                                        <td><a href="uploads/<?php echo $row['filename']; ?>" target="_blank">View</a></td>
+                                                                                                        <td><a href="uploads/<?php echo $row['filename']; ?>" download>Download</td>
+                                                                                                        </tr>
+                                                                                                        <?php } ?>
+                                                                                                    </tbody>
+                                                                                                </table>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div> 
+                                                                    
+                                                                </div>  
+                                                            </div>
+                                                            <div class="back">
+                                                                <a href="2-1.html">Back</a>
+                                                            </div>
+                                                            
+                                                            
+                                                            
+                                                            
+                                                        </body>                                                                                                                      
+                                            </html>
